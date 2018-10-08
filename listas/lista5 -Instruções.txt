@@ -1,0 +1,71 @@
+1)
+	Conjunto de instruções é o conjunto das instruções executadas pela CPU.
+2)
+	I-Opcode:Operação a ser realizada
+	II-Operando fonte:Entrada(registrados, dado, endereço) que será utilizada na operação	
+	III-Operando Destino:Saida no qual vai ser armazenado o resultado da operação
+	IV-Proxima instrução:Salva a próxima instrução(incomum)
+3)
+	As fases existem porque impossibilitam erro de operando na memória ou na E/S.
+4)
+	I-Processamento de dados: operações aritméticas e lógicas.
+	II-Armazenamento de dados: movimentação de dados entre
+	registradores e memória principal.
+	III-Movimentação de dados para E/S: instruções para
+	realização de operações de E/S.
+	IV-Controle de fluxo: instruções de teste e desvio.
+5)
+	Podem existir três dados em uma instrução. Exemplo: ADD RAX,RAX,RBX.
+6)
+	Requer um trabalho extra do programador para manter o valor do operando em questão, e em qual registrador o resultado da operação se encontra.
+7)
+	Sim, é usada pilha para carregar os valores da memória. Por exemplo:
+	PUSH A
+	PUSH B
+	ADD
+	POP A
+8)
+	Quanto mais endereços, mais complexa a operação fica em questão de poder(uma istrução realiza diversas coisas), porém, menos rápida ela fica e requer pouca codificação. O contrário ocorre para menos endereços.
+9)
+	 Deslocamento lógico simplesmente desloca os bits para uma direção, o bit da extremidade é perdido e um 0 é colocado na outra extremidade.
+O deslocamento aritmético faz a mesma coisa, mas mantém o sinal no bit mais significativo.
+10)
+	A instrução de desvio- tem como operando um endereço da próxima instrução, normalmente tem se uma condição para para se saltar, caso a condição não seja atendida, o salto não acontece.
+Instrução de salto- inclui um endereço implicito, normalmente, o salto implica que uma instrção seja pulada, ou seja o endereço implicito é a proxima instrução.
+11)
+	Porque as instruções em questão interrompe o fluxo do código, transferindo o controle para um local diferente.
+12)
+	I-Endereçamento imediato;
+	II-Endereçamento direto;
+	III-Endereçamento indireto;
+	IV-Endereçamento por registradores direto;
+	V-Endereçamento por registradores indireto;
+	VI-Enderaçamento por deslocamento;
+	VII-Endereçamento por pilha.
+13)
+	É o mais rápido, pois não requer uma "viagem" até a memória, porém o tamanho do operando é limitado pela quantidade limite de bits do S.O
+14)
+	O Espaço disponível é maior, porém, o acesso a memória ocorre duas vezes, enquanto que no endereçamento direto só ocorre uma, logo, é mais lento quando comparado ao direto.
+15)
+	O Espaço disponível é grande, mas é realizado duas vezes o acesso a memória. Um exemplo de um endereçamento indireto é load [rax]
+16)
+	 O endereçamento direto por registradores, o campo de endereço referencia ao registrador que contém o operando.
+Enquanto que no endereçamento indireto por registradores, o campo de endereço referencia ao registrador que contém o endereço do operando.
+
+17)	
+	Campo de endereço contém a referência para um endereço base mais um valor de deslocamento. Por exemplo, LOAD [RAX+8].
+18)
+	Com o endereçamento por pilha. Por exemplo
+	PUSH A
+	PUSH B
+	SUB
+	POP A
+19)
+	Tamanho da memoria, organização da memoria, estrutura de barramento, complexidade da CPU, dentre outros..
+20)
+	Pois o conjunto de instrução pode ficar maior ou menor dependendo da quantidade de registradores utilizado.
+21)
+	
+	
+
+	

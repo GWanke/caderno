@@ -1,0 +1,113 @@
+1)
+	A ULA tem a função de realizar operações(tanto lógicas quanto aritméticas). Ela recebe os dados de outros componentes do computador, e transmite o resultado final da operação em um componente especifíco.
+2)
+	A representação sinal-magnetude simplesmente transforma os números para binário, separando o bit mais significativo para o sinal. Porém, o problema com o sinal magnetude está no 0, onde pode ser representado por dois valores distintos. Por exemplo, no caso de 4 bits, o 0 pode ser tanto 0000 quanto 1000.Por sua vez, a representação em complemento de dois corrige este problema. Para represetar um número decimal em complemento de dois, deve-se primeiro transformar em binário, em seguida inverter o valor dos bits(1 vai pra 0 e 0 vai pra 1), em seguida somar mais 1 a tal valor, e por fim, completar os bits de acordo com o sinal(1 pra negativo e 0 pra positivo).
+3)
+	a) 12345 = 11000000111001
+	b) 98765 = 11000000111001101
+	c) 48201 = 1011110001001001
+	d) 35212 = 1000100110001100
+4)
+	2^16 valores, logo, é possivel colocar 65536  valores
+5)
+	a) 7 + 8 = 00000111 + 00001000 = 00001111
+	b) 10 + 90 = 00001010 +  01011010 = 01100100
+	c) 160 - 95 = 10100000 + (10100001) = 01000001
+	d) -10 + 90 = (11110110) + 01011010 = 01010000
+	e) -145 - 50 = (01101111) + (11001110) = 00111101
+6) 
+	a) 0011 * 1101
+	
+	carry|A   |Q   |M   |
+	0    |0000|0011|1101| valores iniciais
+	0    |1101|0011|1101| adição
+	0    |0110|1001|1101| deslocamento
+	1    |0011|1001|1101| adição
+	0    |1001|1100|1101| deslocamento
+	0    |0100|1110|1101| deslocamento
+	0    |0010|0111|1101| deslocamento
+	Resultado final:00100111
+	
+	b)1111 * 1111
+	
+	carry|A   |Q   |M   |
+	0    |0000|1111|1111| valores iniciais
+	0    |1111|1111|1111| adição
+	0    |0111|1111|1111| deslocamento
+	1    |0110|1111|1111| adição
+	0    |1011|0111|1111| deslocamento
+	1    |1010|0111|1111| adição
+	0    |1101|0011|1111| deslocamento
+	1    |1100|0011|1111| adição
+	0    |1110|0001|1111| deslocamento
+	Resultado final:11100001
+	
+	c)1100 * 1010
+	
+	carry|A   |Q   |M   |
+	0    |0000|1010|1100| valores inciais
+	0    |0000|0101|1100| deslocamento
+	0    |1100|0101|1100| adição
+	0    |0110|0010|1100| deslocamento
+	0    |0011|0001|1100| deslocamento
+	0    |1111|0001|1100| adição
+	0    |0111|1000|1100| deslocamento
+	Resultado final:01111000
+7)
+	a) 1100 * 1010
+	A   |Q   |Q-1 |M   | 
+	0000|1100|0   |1010| valores iniciais
+	0000|0110|0   |1010| deslocamento
+	0000|0011|0   |1010| deslocamento
+	0110|0011|0   |1010| subtração      
+	0011|0001|1   |1010| deslocamento
+	0001|1000|1   |1010| deslocamento 
+	Resultado final:00011000
+
+	b) 0101 * 1010
+	A   |Q   |Q-1 |M   |
+	0000|0101|0   |1010| valores iniciais
+	0110|0101|0   |1010| subtração
+	0011|0010|1   |1010| deslocamento
+	1101|0010|1   |1010| adição
+	1110|1001|0   |1010| deslocamento
+	0100|1001|0   |1010| subtração
+	0010|0100|1   |1010| deslocamento
+	1100|0100|1   |1010| adição
+	1110|0010|0   |1010| deslocamento
+	Resultado final:11100010
+
+	c) 0011 * 1011
+	A   |Q   |Q-1 |M   |
+	0000|0011|0   |1011| valores iniciais
+	0101|0011|0   |1011| subtração
+	0010|1001|1   |1011| deslocamento
+	0001|0100|1   |1011| deslocamento
+	1100|0100|0   |1011| adição
+	1110|0010|0   |1011| deslocamento
+	1111|0001|0   |1011| deslocamento
+	Resultado final: 11110001
+8)
+	Porque a base trabalhada sempre será a base binária(2).
+9)
+	O expoente, em primeiro momento, pode ser tanto positivo quanto negativo. Logo, poderia usar o complemento de dois para guardar o expoente, mas seria um passo adicional. Para evitar tal passo, utiliza-se o expoente polarizado. Isto é, caso o S.O for de 32 bit, soma-se o número 127 ao expoente, tornando assim o expoente um número positivo sempre.
+10)
+	Porque caso o número que esteja sendo trabalhado for diferente de 0, o primeiro bit da mantissa sempre vai ser 1.
+11)
+	Para atingir o número de bits da mantissa(23 bits)
+12)
+	Overflow ocorre quando o expoente é muito grande(maior que 128 bits), por contrapartida, underflow ocorre quando o expoente é muito pequeno.
+13)
+	Depende do S.O. Caso for 32 bits, o campo reservado para o expoente é de 8 bits para o expoente, 23 bits para a mantissa e 1 bit para o sinal. Caso for 64 bits, 11 bits são reservados para o expoente, 52 para a mantissa e 1 para o sinal.
+14) 
+	I)Vericação do 0:se algum operando for 0, o outro é informado
+como o resultado.
+	II)Alinhamento de mantissa:O alinhamento é obtido deslocando repetidamente a
+parte de magnitude do mantissa 1 dígito para a direita, e
+aumentando o expoente até que os dois expoentes sejam
+iguais.
+	III)Adição ou subtração das mantissas
+	IV)Normalização do resultado:Consiste no deslocamento dos dígitos do significando
+para a esquerda até que o dígito mais significativo seja
+diferente de zero
+

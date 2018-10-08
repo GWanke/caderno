@@ -1,0 +1,33 @@
+1)
+	É a conexão dos componentes de um computador.
+2)
+	Podem ocorrer 5 tipos de transfêrencias:
+	I)CPU para memória;
+	II)Memória para CPU;
+	III)E/S para CPU;
+	IV)CPU para E/S;
+	V)E/S para Memória (DMA).
+3)
+	Arbitragem é usado, basicamente, para garantir o controle dos barramentos para o(s) dispositivo(s) certo(s).
+4)
+	Dados,endereço e controle
+5)
+	Tempo menor de propagação
+6)
+	
+	a)4 byte.
+
+	b)A CPU precisa esperar dois ciclos de barramento para os dados chegarem.
+
+	c)PC: 32 bits
+	  IR: 8bits
+7)
+	frequencia do barramento 2MHz
+	16 bits = 2 bytes 	
+	4 MB/s
+8)
+	Cada ciclo transfere 16 bits: 2 bytes
+	Cada ciclo transfere 8 bits: 1 bytes
+	a) A diferença será no tempo do  barramento, pois em um barramento de 16bits,a transfêrencia de dados é possível em um único ciclo de barramento, enquanto que em 8bits levaria 2 ciclos.
+
+	b) a diferença diminuiria para 50% a mais para o barramento de 16bits em consideração ao de 8 bits.

@@ -1,0 +1,165 @@
+1)
+	EXTERN PRINTF
+	SECTION .DATA
+	m1 db "Media dos valores é de%f",10,0
+	SECTION .TEXT
+	GLOBAL MAIN
+	MAIN:
+		MOV RAX,5
+		MOV RBX,10
+		MOV RCX,8
+		ADD RAX,RBX
+		ADD RAX,RCX
+		DIV 3
+		MOV RSI,RAX
+		MOV RDI,m1
+		MOV RAX,0
+		CALL PRINTF
+		RET
+
+2)
+	EXTERN PRINTF
+	SECTION .DATA
+	m1 db "Media ponderada dos valores é:%f",10,0
+	SECTION .TEXT
+	GLOBAL MAIN
+	MAIN:
+		MOV RAX,5
+		MUL 2
+		MOV RBX,RAX
+		MUV RAX,8
+		MUL 2
+		MOV RCX,RAX
+		MOV RAX,4
+		MUL 3
+		MOV RDX,RAX
+		MOV RAX,9
+		MUL 3
+		ADD RAX,RBX
+		ADD RAX,RCX
+		ADD RAX,RDX
+		DIV 10
+		MOV RSI,RAX
+		MOV RDI,m1
+		MOV RAX,0
+		CALL PRINTF
+		RET
+
+3)
+	EXTERN PRINTF
+	SECTION .DATA
+	M1 db "O maior valor é de:%d",10,0
+	M2 db "O menor valor é de:%d",10,0
+	SECTION.TEXT
+	GLOBAL MAIN
+	MAIN:
+		MOV RAX,10
+      		MOV RBX,5
+      		MOV RCX,15
+      		CMP RAX,RBX
+      		JGE L1
+      		CMP RBX,RCX
+      		JGE L3
+      		L3:
+      		MOV RSI,RBX
+      		MOV RDI,M1
+      		XOR RBX,RBX
+      		CALL PRINTF
+      		JUMP END
+      		L1:
+      		CMP RAX,RCX
+      		JGE L2
+      		MOV RSI,RCX
+      		MOV RDI,M1
+      		XOR RCX,RCX
+      		CALL PRINTF
+      		JUMP END2
+      		L2:
+      		MOV RSI,RAX
+      		MOV RDI,M1
+      		XOR RAX,RAX
+      		CALL PRINTF
+     		JUMP END2
+      		END:
+      		CMP RAX,RBX
+      		JBE L1
+      		CMP RBX,RCX
+      		JBE L3
+      		L3:
+      		MOV RSI,RBX
+      		MOV RDI,M2
+      		XOR RBX,RBX
+      		CALL PRINTF
+      		JUMP END2
+      		L1:
+      		CMP RAX,RCX
+      		JBE L2
+      		MOV RSI,RCX
+      		MOV RDI,M2
+      		XOR RCX,RCX
+      		CALL PRINTF
+      		JUMP END2
+      		L2:
+      		MOV RSI,RAX
+      		MOV RDI,M2
+      		XOR RAX,RAX
+      		CALL PRINTF
+      		JUMP END2
+      		END2:
+      		RET
+4)
+	SECTION .TEXT
+	GLOBAL MAIN
+	MAIN: 
+        	PUSH N
+		CALL SOMATORIO
+        	ADD RSP,8
+		JMP END
+	SOMATORIO:
+		PUSH RBP
+		MOV RBP,RSP
+		SUB RSP,16
+		MOV QWORD[RPB-8],0
+		MOV QWORD[RPB-16],0
+		MOV RAX,0
+		JMP L2
+		L1:
+		ADD [RBP-8],RAX
+		INC RAX
+		MOV [RBP-16],RAX
+		L2:
+		CMP RAX,[RPB+16]
+		JB L1
+		MOV RAX,[RBP-8]
+		MOV RSP,RBP
+		POP RPB
+		RET
+	END;
+5)
+	SECTION .TEXT 
+	GLOBAL MAIN
+	MAIN:
+		PUSH N
+		CALL FAT
+		ADD RSP,8
+		JMP END
+	FAT:
+		PUSH RBP
+		MOV RBP, RSP
+		SUB RSP, 16
+		MOV QWORD [RBP-8], 1
+		MOV QWORD [RBP-16], 1
+		MOV RAX, 1
+		JMP L2
+		L1:
+		MUL RBX
+		INC RBX
+		MOV [RBP-8], RAX
+		MOV [RBP-16], RBX
+		L2:
+		CMP RBX, [RBP+16]
+		JBE L1
+		MOV RSP, RBP
+		POP RBP
+		RET
+	END;

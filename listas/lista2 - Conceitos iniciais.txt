@@ -1,0 +1,107 @@
+1)
+	Arquitetura de computadores se refere aos atributos visíveis ao programador,enquanto que organização se refere ao modo de implementação dos recursos.
+2)
+	"Função" é a operação individual de cada componente como parte da estrutura, enquanto que "estrutura" é o modo como os componentes são inter-relacionados.
+3)
+	I)Processamento de dados;
+	II)Armazenamento de dados;
+	III)Movimento de dados;
+	IV)Controle.
+4)
+	I)CPU(Unidade Central de Processamento):Desempenha a função de processamento dos dados;
+	II)Memória principal: Desempenha a função de armazenamento de dados;
+	III)Entradas e Saídas(E/S): Transfere dados do computador para o ambiente externo;
+	IV)Barramentos:Responsável por estabelecer uma comunicação entre os outros componentes.
+5)
+	O computador pode ser dividido em diversos níveis, sendo a quantidade de níveis a par de discussão. Entretanto, os níveis mais estudados na disciplina de Arquitetura e Organização dos computadores são:Alto e Baixo nível.
+6)
+	O conceito de armazenar um programa no computador surgiu da necessidade dos programadores de terem os seus programas/dados salvos na memória para serem previamente acessados, sem a necessidade de ter que programar novamente.
+	Tal conceito foi proposto por Von Neumann, que desenvolveu uma arquitetura para testa-lo. Tal arquitetura foi colocada em prática no computador IAS.
+7)
+	O modelo de Von Neumann é constítuido de uma Unidade Central de processament(CPU), que por sua vez é constituída de uma Unidade de controle do programa(CC) e uma Unidade lógica aritmética(CA). O modelo também é integrado por equipamento de E/S(Entrada e saída) e memória principal(M).
+
+	M:Guarda dados e instruções;
+	CC:Procura instruções na M e determina os tipos de instruções.
+	CA:Responsável por realizar operações aritméticas e lógicas.
+	CPU:Executa as intruções/programas dentro da M.
+
+	A importância de tal modelo é alta, devido a capacidade de armazenar programas/dados em um computador, pela primeira vez.
+
+8)
+	O problema principal é que a memória RAM é mais lenta que o processador, significando que o processador teria que "esperar" os dados da memória, sendo que ao mesmo tempo, já teria processado os dados anteriores, causando um tempo ocioso, ou seja, desperdiçando a capacidade do processador.
+	O aparecimento da memória cache facilitou tal comunicação, sendo que fica mais rápido para o processador acessar trechos recentemente utilziados pela memória.
+9)
+	Os Registradores são locais de armazenamento na CPU de rápido acesso e temporários.
+10)
+	A lei de Moore revela que o número de transistores nos processadores dobra a cada 18 meses.
+11)
+	Load M(2).
+	A viagem será realizada uma vez, pelo ciclo de busca.
+12)	
+	Ciclo de busca:
+	
+	I-CPU envia o conteúdo de PC para a memória, utilizando o barramento de endereço;
+	II-CPU Envia um sinal de leitura para a memória;
+	III-MAR recebe o que está contido em PC;
+	IV-MBR recebe a instrução contida em MAR pelo barramento de dados;
+	V-IBR recebe a segunda parte da palavra contida em MBR(bits 20 até 39);
+	VI-IR recebe o OPCODE da primeira parte da palavra em MBR(bits 0 até 7)(barramento de controle);
+	VII-MAR recebe o operando da primeira parte da palavra(bits 8 até 19);
+	VIII-PC recebe PC+1.
+
+13)
+	A fim de aumentar o desempenho.
+14)
+	Tal modelo(modelo 75) é melhor quando comparado ao anterior(modelo 30) pois ocorre diversas mudanças, como um menor tempo do ciclo do processador(1/4 do tempo do modelo 30), um aumento de 32 vezes no tamanho máximo da memória, um aumento de 16 vezes na taxa de dados da memória,etc.
+15)
+	Quantidade de instruções:100.000
+	Quantidade de ciclos:233.000
+	CPI efetivo=233.000/100.000=2,33
+
+	MIPS = 40/2.33=~17,17.
+	Tempo de execução = 233.000/40.10^6 = 0,0058 segundos.
+
+16)
+	Máquina A:
+	Quantidade de instruções:18.000.000
+	Quantidade de ciclos:40.000.000
+	CPI Efetivo: 2,22
+	MIPS: 90,1 
+	Tempo de execução:0.2 segundos.
+
+	Máquina B:
+	Quantidade de instruções:24.000.000
+	Quantidade de ciclos: 46.000.000
+	CPI Efetivo: 1,92
+	MIPS:104,17
+	Tempo de execução:0,23 segundos
+17)
+	Nem sempre um processador com um menor clock é pior que um processador com maior clock. Por exemplo, um i3 possui um clock maior que um i5, mas é considerado pior, pois todas as métricas utilizadas para medir o desempenho(cpi efetivo, mips, tempo de execução) são melhores no i5.
+18)*
+
+19)
+	Cada arquitetura teu seu próprio código de máquina, logo, um assembly pode se diferenciar de outro, os fatores mais comuns nessa diferenciação são os número de registradores, a representação de números, a quantidade de endereços, dentre outros.
+20)
+	O primeiro computador a utilizar a arquitetura de Von Neumann, logo, foi o primeiro computador no qual salvava os programas/dados em sua memória.
+21)
+	I)PC - Armazena o endereço da próxima instrução
+	II)MBR- Registrador que armazena temporariamente os dados lidos ou escritos na memória
+	III)MAR - Registrador que armazena um endereço da uma palavra na memória
+	IV)IBR - Armazena temporariamente uma instrução
+	V)IR - Armazena a instrução que está sendo executada.
+	VI) AC e MQ- Registradores de uso geral, armazenam variaveis.
+22)
+	Ciclo de busca e execução.
+23)
+	I-CPU envia o conteúdo de PC para a memória, utilizando o barramento de endereço;
+	II-CPU Envia um sinal de leitura para a memória;
+	III-MAR recebe o que está contido em PC;
+	IV-MBR recebe a instrução contida em MAR pelo barramento de dados;
+	V-IBR recebe a segunda parte da palavra contida em MBR(bits 20 até 39);
+	VI-IR recebe o OPCODE da primeira parte da palavra em MBR(bits 0 até 7)(barramento de controle);
+	VII-MAR recebe o operando da primeira parte da palavra(bits 8 até 19);
+	VIII-PC recebe PC+1.
+24)
+	
+	
+	
