@@ -1,8 +1,4 @@
-	Adicionar abono nos diagramas/funcionalidades, criar caso de uso para abono.
-	Adicionar "manter editoras/autores", alterar os diagramas para refletir as novas funcionalidades.
-	Arrumar extend/include do diagrama de caso de uso da manutenção.
-	Editas os requisitos funcionais do sistema para refletir as mudanças acima.
-	Checar/"atualizar" a prototipagem.
-	
-
+Criar protótipos de tela para a funcionalidade de cadastro de autor/editor e busca por autor/editor
+Criar dois casos de uso, Cadastro de autor e editor
+Rever o documento
 
